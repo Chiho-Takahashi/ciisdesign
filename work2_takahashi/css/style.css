@@ -1,6 +1,7 @@
 @charset "utf-8";
 .bluebox{
-    width: 960px;
+    max-width: 960px;
+    width: 100%;
     display: flex; 
     justify-content: space-between
 }
@@ -11,7 +12,8 @@
 }
 
 .redbox{
-    width: 960px;
+    max-width: 960px;
+    width: 100%;
     display: flex; 
     flex-wrap: wrap;
     justify-content: space-between
@@ -19,45 +21,38 @@
 .box2{
     width: 300px;
     height: 300px;
-    margin: 10px 0px;
+    margin: 15px 0px;
     background-color: red;
 }
 
 .header{
     max-width: 960px;
     display: flex; 
-    padding: 20px 0px;
+    padding: 20px 60px;
     justify-content: space-between;
 }
 .title{
     font-size: 35px;
     font-weight: bold;
-    padding-left: 80px;
 }
 ul{
     display: flex;
-    font-size: 15px;
-    padding-right: 60px;
+    font-size: 14px;
 }
 li{
-    padding: 10px 20px;
+    padding: 10px 25px;
 }
 li+li{
     border-left: 1px solid #4c4c4c;
 }
 
 @media screen and (max-width:767px) {
-    header,ul{
+    .header,ul{
         flex-direction: column;
-    }
-    .title{
-        padding: 0px;
-        margin: 10px;
     }
     li{
         border-bottom: 1px solid #4c4c4c;
         padding: 12px 0px;
-        margin-left: 10px;
     }
     li+li{
         border-left: none;
