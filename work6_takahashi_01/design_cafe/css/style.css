@@ -1,0 +1,493 @@
+@charset "UTF-8";
+
+body{
+    background-color: #E8D9BF;
+}
+
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 7.6%;
+    padding-left: 2.8%;
+    position: absolute;
+    z-index: 9997;
+    width: 100%;
+}
+.header_nav-list{
+    display: flex;
+    gap: 77px;
+}
+.logo{
+    width: 227px;
+}
+.header_nav-item{
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;;
+}
+
+.container{
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.main_wrap{
+    text-align: center;
+    margin: 106px 0 100px;
+}
+.main_intro{
+    font-size: 30px;
+}
+.main_heading{
+    font-size: 82px;
+    line-height: 1.17;
+    letter-spacing: 0.1em;
+    padding: 55px 0 45px;
+    white-space: pre-line;
+}
+.main_text{
+    font-size: 23px;
+    line-height: 1.65;
+    letter-spacing: 0.1em;
+    white-space: pre-line;
+}
+.sp-only {
+    display: none;
+}
+
+#about{
+    display: flex;
+    align-items: center;
+}
+.about_img{
+    width: 50%;
+}
+.about_img img{
+    border-bottom-right-radius: 82px;
+}
+.about_wrap{
+    width: 50%;
+    padding-left: 85px;
+}
+.section_title{
+    height: 55px;
+    width: auto;
+}
+.about_heading{
+    font-size: 41px;
+    line-height: 1.38;
+    margin: 60px 0 30px;
+    white-space: pre-line;
+}
+.about_text{
+    font-size: 16px;
+    line-height: 1.62;
+}
+#menu{
+    padding: 108px 0 100px;
+}
+#menu h3{
+    text-align: center;
+    padding-bottom: 50px;
+}
+.menu_container{
+    display: flex;
+    justify-content: space-between;
+}
+.menu_container li{
+    width: 30%;
+}
+.menu_img{
+    border-top-right-radius: 42px;
+}
+.menu_wrap{
+    position: relative;
+}
+.menu_title_absolute{
+    font-size: 38px;
+    line-height: 0.57;
+    position: absolute;
+    top: 98%;
+    left: 10px;
+    color: #D30202;
+}
+.menu_text{
+    font-size: 17px;
+    line-height: 1.47;
+    padding-top: 43px;
+}
+
+#gallery{
+    margin-bottom: 70px;
+}
+#gallery h3{
+    text-align: center;
+    padding-bottom: 25px;
+}
+.slider{
+    display: flex;
+    position: relative;
+}
+/* .slider li{
+    width: 20%;
+} */
+
+#event h3{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.event_wrap{
+    height: 120px;
+    padding: 33px 0 42px;
+    border: #4F260B 4px solid;
+    background-color: #ffffff;
+}
+.event_wrap li{
+    display: flex;
+    font-size: 23px;
+    line-height: 1.95;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.event_wrap li p{
+    text-decoration: underline #4F260B 1px;
+    padding-left: 5.8%;
+}
+#access{
+    line-height: 0;
+}
+#access h3{
+    text-align: center;
+    margin: 80px 0 42px;
+}
+iframe{
+    width: 100%;
+    height: 471px;
+    filter: grayscale(100%) invert(92%) contrast(83%);
+}
+
+footer{
+    background-color: #ffffff;
+    padding-top: 80px;
+}
+.footer_container{
+    display: flex;
+    padding-left: 23.9%;
+}
+.cafe_logo{
+    width: 226px;
+    margin-right: 3.48%;
+}
+
+.address li{
+    font-size: 20px;
+    line-height: 1.95;
+    color: #000000;
+}
+.copy{
+    padding: 75px 0 80px;
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+}
+.toTop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 125px;
+}
+
+/* ハンバーガーメニュー pcサイズでは消しておく */
+.hamburger,
+.header_nav-sp{
+    display: none;
+}
+
+/* main visual スライダー インジケーター */
+.slick-dots {
+    bottom: 10px;
+}
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before{
+    color: #ffffff;
+}
+
+/* Gallaryのスライダー 矢印 */
+.prev-arrow,
+.next-arrow {
+    position: absolute;
+    border-bottom: solid 5px #ffffff;
+    border-left: solid 5px #ffffff;
+    width: 20px;
+    height: 20px;
+    top:0;
+    bottom:0;
+    margin:auto 0;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+.prev-arrow {
+    left: 22%;
+    z-index: 9995;
+}
+.next-arrow {
+    right: 22%;
+    transform: rotate(-135deg);
+}
+
+
+@media screen and (max-width:1100px){ 
+    .header_nav {
+        display: none;
+    }
+    /* ハンバーガーメニュー(三本線)を書く箱を作る */
+    .hamburger {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        z-index: 9999;
+    }
+    .hamburger span {
+        width: 30px;
+        height: 2px;
+        background-color: #ffffff;
+        position: absolute;
+        top: 14px;
+        transition: 0.3s;
+    }
+    /* 疑似要素 */
+    .hamburger span::before {
+        width: 30px;
+        height: 2px;
+        background-color: #ffffff;
+        position: absolute;
+        content: "";
+        top: -12px;
+        transition: 0.3s;
+    }
+    .hamburger span::after {
+        width: 30px;
+        height: 2px;
+        background-color: #ffffff;
+        position: absolute;
+        content: "";
+        bottom: -12px;
+        transition: 0.3s;
+    }
+    /* openした時 */
+    .open span {
+        background-color: transparent;
+    }
+    .open span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    .open span::after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    .header_nav-sp {
+        position: absolute;
+        z-index: 9998;
+        width: 100%;
+        height: 100vh;
+        background-color: #00000096;
+    }
+    .header_nav-sp .header_nav-list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 20px;
+    }
+    .container{
+        padding: 0 5.33%;
+    }
+
+    .main_heading{
+        font-size: 70px;
+    }
+    .about_heading{
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .container{
+        margin: 0 auto;
+        padding: 0;
+    }
+    .main_wrap{
+        margin: 40px 0 60px;
+    }
+    .main_intro{
+        font-size: 17px;
+    }
+    .main_heading{
+        font-size: 38px;
+        line-height: 1.15;
+        letter-spacing: 0.02em;
+        padding: 25px 0 20px;
+    }
+    .main_text{
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    .sp-only {
+        display: block;
+    }
+
+    .section_title{
+        height: 45px;
+        width: auto;
+    }
+    #about{
+        flex-direction: column;
+        position: relative;
+    }
+    .about_img{
+        width: 100%;
+        margin-top: 60px;
+    }
+    .about_img img{
+        border-bottom-right-radius: 0;
+    }
+    .about_wrap{
+        width: 100%;
+        padding: 0 5.33%;
+    }
+    .about_heading{
+        font-size: 36px;
+        line-height: 1.25;
+        margin: 35px 0 33px;
+    }
+    .about_wrap h3{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .about_text{
+        line-height: 1.75;
+    }
+
+    #menu{
+        padding: 55px 35px 30px 35px;
+    }
+    #menu h3{
+        padding-bottom: 20px;
+    }
+    .menu_container{
+        flex-direction: column;
+    }
+    .menu_container li{
+        width: 100%;
+    }
+    .menu_img{
+        border-top-right-radius: 42px;
+    }
+    .menu_title_absolute{
+        font-size: 40px;
+        line-height: 0.55;
+        position: absolute;
+        top: 98%;
+        left: 10px;
+        color: #D30202;
+    }
+    .menu_text{
+        line-height: 1.58;
+        padding: 53px 0 60px;
+    }
+
+    #gallery{
+        margin-bottom: 35px;
+    }
+    #gallery h3{
+        padding-bottom: 15px;
+    }
+    .slider li{
+        width: 100%;
+        display: none;
+    }
+    .slider li:nth-child(3) {
+        display: block; 
+    }
+
+    #event h3{
+        margin-bottom: 15px;
+    }
+    .event_wrap{
+        height: 175px;
+        padding: 20px 0 15px;
+        margin: 0 5.33%;
+        border: #4F260B 3px solid;
+    }
+    .event_wrap li{
+        flex-direction: column; 
+        font-size: 16px;
+        line-height: 1.25;
+        max-width: 300px;
+        padding: 0 10px 20px 25px;
+    }
+    .event_wrap li p{
+        padding-left: 0;
+        padding-top: 3px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    #access h3{
+        text-align: center;
+        margin: 30px 0 10px;
+    }
+    iframe{
+        width: 100%;
+        height: 190px;
+    }
+    footer{
+        padding-top: 46px;
+    }
+    .footer_container{
+        flex-direction: column;
+        padding-left: 5.33%;
+    }
+    .cafe_logo{
+        width: 226px;
+        margin-bottom: 30px;
+    }
+    .address li{
+        font-size: 18px;
+        line-height: 1.72;
+        color: #000000;
+    }
+    .copy{
+        padding: 40px 0 30px;
+    }
+    .toTop{
+        bottom: 10px;
+        right: 10px;
+        width: 100px;
+    }
+
+    /* Gallary スライダー 矢印_sp*/
+    .prev-arrow,
+    .next-arrow {
+        border-bottom: solid 2px #ffffff;
+        border-left: solid 2px #ffffff;
+        width: 14px;
+        height: 14px;
+    }
+    .prev-arrow {
+        left: 5%;
+    }
+    .next-arrow {
+        right: 5%;
+    }
+
+}
