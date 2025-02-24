@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.background{
+    background-image: url("../images/background.png"); 
+    background-repeat: repeat; 
+    background-position: left top;
+    width: 100%;
+    height: auto; 
+}
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 7.8%;
+    padding-left: 6.2%;
+    margin-top: 90px;
+    width: 100%;
+}
+.header_nav_list{
+    display: flex;
+    gap: 55px;
+}
+.logo{
+    width: 110px;
+}
+.header_nav_item{
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 17px;
+}
+
+/* フッター */
+.footer_background_base{
+    background-position: bottom;
+    position: absolute;
+}
