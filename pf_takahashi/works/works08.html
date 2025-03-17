@@ -6,6 +6,7 @@
     <title>works04</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/works.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script>
         (function(d) {
@@ -47,6 +48,27 @@
                 </ul>
             </nav>
         </div>
+        <!-- ハンバーガーメニュー -->
+        <div class="hamburger">
+            <span></span>
+        </div>
+        <nav class="header_nav-sp">
+            <ul class="header_nav_list">
+                <li class="header_nav_item">
+                    <a href="../about.html">About</a>
+                </li>
+                <li class="header_nav_item">
+                    <a href="../index.html/#service">Service</a>
+                </li>
+                <li class="header_nav_item">
+                    <a href="../works.html">Works</a>
+                </li>
+                <li class="header_nav_item">
+                    <a href="../contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+          
     </header>
     <main>
         <h2 class="section_title_works"><span>W</span>orks</h2>
@@ -99,7 +121,7 @@
                 </p>
             </div>
             
-            <div class="moc_area_3">
+            <div class="moc_area_5">
                 <!-- PCモックアップ -->
                 <div class="moc_capture_pc08">
                     <figure class="capture_pc_p" style="-ms-overflow-style: none; scrollbar-width: none;">
@@ -124,13 +146,57 @@
                         <img src="../images/moc_pc_shadow.png">
                     </div> 
                 </div>
-                
-
-                <!-- <div class="scroll_arrow08">
-                    <div class="scroll">
-                        <span>scroll</span>
+            </div>
+        </div>
+        <div id="modal_area">
+            <p class="modal_text">View All</p>
+            <div class="modal">
+                <div class="inner">
+            
+                <!-- モーダルを開くボタン -->
+                <p class="modal__trigger" data-index="0">パソコン版</p>
+                <p class="modal__trigger_sp modal__trigger" data-index="1">スマホ版</p>
+                <!-- モーダル本体 -->
+                <div class="modal__wrapper" data-index="0">
+                    <div class="modal__layer"></div>
+                    <div class="modal__container">
+                    <div class="modal__inner">
+            
+                        <!-- モーダルを閉じるボタン -->
+                        <div class="modal__close"></div>
+            
+                        <!-- モーダル内のコンテンツ -->
+                        <div class="modal__content">
+                            <img src="../images/works_08_chapter.jpg" alt="WORKERSランディングページ パソコンcapture" 
+                            />
+                        </div>
+            
                     </div>
-                </div> -->
+                    </div>
+                </div>
+                <!-- / モーダル本体 -->
+            
+                <!-- モーダル本体 -->
+                <div class="modal__wrapper" data-index="1">
+                    <div class="modal__layer"></div>
+                    <div class="modal__container">
+                    <div class="modal__inner">
+            
+                        <!-- モーダルを閉じるボタン -->
+                        <div class="modal__close"></div>
+            
+                        <!-- モーダル内のコンテンツ -->
+                        <div class="modal__content">
+                            <img src="../images/works_08_sp_chapter.jpg" alt="WORKERSランディングページ スマホcapture" 
+                            />
+                        </div>
+            
+                    </div>
+                    </div>
+                </div>
+                <!-- / モーダル本体 -->
+                        
+                </div>
             </div>
         </div>
 
@@ -186,6 +252,83 @@
             </a>
         </div>
     </footer>
-   
+
+    <script>
+        $(function(){
+            // 変数に要素を入れる
+            var trigger = $('.modal__trigger'),
+                wrapper = $('.modal__wrapper'),
+                layer = $('.modal__layer'),
+                container = $('.modal__container'),
+                close = $('.modal__close');
+
+            // 『モーダルを開くボタン』をクリックしたら、『モーダル本体』を表示
+            $(trigger).click(function() {
+            var index = $(this).data("index");
+            $('.modal__wrapper[data-index="' + index +'"]').fadeIn(400);
+
+            // スクロール位置を戻す
+            $(container).scrollTop(0);
+
+            // サイトのスクロールを禁止にする
+            $('html, body').css('overflow', 'hidden');
+            });
+
+            // 『背景』と『モーダルを閉じるボタン』をクリックしたら、『モーダル本体』を非表示
+            $(layer).add(close).click(function() {
+            $(wrapper).fadeOut(400);
+
+            // サイトのスクロール禁止を解除する
+            $('html, body').removeAttr('style');
+            });
+
+            // ハンバーガーメニュー
+            $(".hamburger").click(function () {
+                $(".hamburger").toggleClass("open");
+                $(".header_nav-sp").fadeToggle();
+            });
+
+            // toTop
+            const $pageTop = $(".toTop");
+
+            $(window).on("scroll", function () {
+            if ($(this).scrollTop() > 100) {
+                if (!$pageTop.is(":visible")) {
+                $pageTop.fadeIn(200).css("display", "flex");
+                }
+            } else {
+                if ($pageTop.is(":visible")) {
+                $pageTop.fadeOut(200);
+                }
+            }
+
+            let scrollHeight = $(document).height(); // ドキュメントの高さ
+            let scrollPosition = $(window).height() + $(window).scrollTop(); // 現在のスクロール位置
+            let footHeight = $("footer").innerHeight(); // フッターの高さ
+
+            if (scrollHeight - scrollPosition <= footHeight) {
+                // フッターが見えたらボタンを固定ではなくabsoluteに変更
+                $pageTop.css({
+                position: "absolute",
+                bottom: footHeight + 20, // 余白を調整
+                });
+            } else {
+                $pageTop.css({
+                position: "fixed",
+                bottom: "50px",
+                });
+            }
+            });
+
+            // トップへ戻るボタンのクリックイベント
+            $("#topBtn, .toTop").on("click", function () {
+            $("html, body").animate({ scrollTop: 0 }, 400);
+            return false;
+            });
+
+
+        });
+    
+    </script>
 </body>
 </html>

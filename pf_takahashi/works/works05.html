@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>works02</title>
+    <title>works03</title>
 
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/works.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         (function(d) {
           var config = {
@@ -48,50 +48,66 @@
                 </ul>
             </nav>
         </div>
+        <!-- ハンバーガーメニュー -->
+        <div class="hamburger">
+            <span></span>
+        </div>
+        <nav class="header_nav-sp">
+            <ul class="header_nav_list">
+                <li class="header_nav_item">
+                    <a href="../about.html">About</a>
+                </li>
+                <li class="header_nav_item">
+                    <a href="../index.html/#service">Service</a>
+                </li>
+                <li class="header_nav_item">
+                    <a href="../works.html">Works</a>
+                </li>
+                <li class="header_nav_item">
+                    <a href="../contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
         <h2 class="section_title_works"><span>W</span>orks</h2>
         <div class="flex_area">
             <div class="works_detail_container_left">
-                <div class="img_detail_b">
-                    <div class="img_detail_wrap">
-                        <div id=circle class="circle_corlor02"></div>
-                        <div class="img_detail_01">
-                            <img src="../images/works_2-100.jpg" alt="新ハンバーガーSNS告知 高級ver.">
+                <div class="img_detail">
+                    <div class="img_detail_wrap02">
+                        <div id=detail_circle class="circle_corlor05"></div>
+                        <div class="img_detail_03">
+                            <img src="../images/works_5-100.jpg" alt="デザスタmobile キャンペーンバナー">
                         </div>
                     </div>
                 </div>
                 <div class="desc_list_margin">
                     <div class="desc_list">
                         <ul class="desc_item">
-                            <li class="text01_height">作品概要</li>
+                            <li class="text02">作品概要</li>
                             <li class="text02">制作範囲</li>
                             <li class="text02">制作期間</li>
                             <li class="text03">使用ソフト</li>
                         </ul>
                         <ul class="desc_item_content">
-                            <li class="content01_height">
-                                新商品の告知のためのSNS用バナー。
-                                サイト誘導と来店促進を目的とし、ABテストのため[高級ver.]と
-                                [POPver.]の2案を制作。
+                            <li class="content02">
+                                春限定の学割プランキャンペーン
                             </li>
                             <li class="content02">
-                                素材集め/デザイン
+                                デザイン(トレース)
                             </li>
                             <li class="content02">
-                                1週間
+                                3日
                             </li>
                             <li class="content02">
-                            Illustrator / Photoshop
+                                Illustrator / Photoshop
                             </li>
                         </ul>
                     </div>
                 </div>
-                <p class="desc_consept">
-                    [高級ver.]
-                    ターゲットを20~30代の女性と想定。アクセントカラーにはハンバーガーのチーズやソースに合わせた色味にしました。
-                    高級感を出すために鏡面に写っているように反射させ、背景のグラデーションでつるっとした質感と奥行きを表現しました。背景色はターゲットや商品イメージに合わせ、高級感の中にも柔らかさを演出するためにこだわりました。
-                </p>
+                <p class="desc_consept02">
+                    スクール課題のトレース作品です。
+                    春をイメージさせるためピンクと桜のあしらいを使い、背景に和紙の画像を重ねて質感を出しました。デザインカンプのイメージを損なわないように、フォントの選定と背景の質感・カラーの再現にこだわりました。                </p>
             </div>
             <div class="works_detail_container_right">
                 <div class="works_detail_title">
@@ -99,19 +115,19 @@
                         Banner Design
                     </p>
                     <p class="desc_title">
-                        新ハンバーガー SNS告知 (仮想)
+                    デザスタmobile (仮想)
                     </p>
                 </div>
                 <!-- spモックアップ -->
                 <div class="moc_banner_sp">
-                    <div class="capture_sp02">
-                        <img src="../images/works_2_moc-100.jpg" alt="新ハンバーガーSNS告知 高級ver."/>
+                    <div class="capture_sp05">
+                        <img src="../images/works_5-100.jpg" alt="デザスタmobile キャンペーンバナー">
                     </div>
                     <div class="moc_capture_sp_img">
-                        <img src="../images/moc_banner_sp.png" alt="スマホ"/>
+                        <img src="../images/moc_banner_sp.png" alt="スマホ">
                     </div>
                     <div class="shadow">
-                        <img src="../images/moc_banner_sp_shadow.png"/>
+                        <img src="../images/moc_banner_sp_shadow.png">
                     </div>
                 </div>
             </div>
@@ -168,9 +184,55 @@
             </a>
         </div>
     </footer>
+    <script>
+        $(function () {
+            // ハンバーガーメニュー
+            $(".hamburger").click(function () {
+                $(".hamburger").toggleClass("open");
+                $(".header_nav-sp").fadeToggle();
+            });
+
+            const $pageTop = $(".toTop");
+
+            $(window).on("scroll", function () {
+            if ($(this).scrollTop() > 100) {
+                if (!$pageTop.is(":visible")) {
+                $pageTop.fadeIn(200).css("display", "flex");
+                }
+            } else {
+                if ($pageTop.is(":visible")) {
+                $pageTop.fadeOut(200);
+                }
+            }
+
+            let scrollHeight = $(document).height(); // ドキュメントの高さ
+            let scrollPosition = $(window).height() + $(window).scrollTop(); // 現在のスクロール位置
+            let footHeight = $("footer").innerHeight(); // フッターの高さ
+
+            if (scrollHeight - scrollPosition <= footHeight) {
+                // フッターが見えたらボタンを固定ではなくabsoluteに変更
+                $pageTop.css({
+                position: "absolute",
+                bottom: footHeight + 20, // 余白を調整
+                });
+            } else {
+                $pageTop.css({
+                position: "fixed",
+                bottom: "50px",
+                });
+            }
+            });
+
+            // トップへ戻るボタンのクリックイベント
+            $("#topBtn, .toTop").on("click", function () {
+            $("html, body").animate({ scrollTop: 0 }, 400);
+            return false;
+            });
 
 
-<body>
-    
+        });
+    </script>
+
+
 </body>
 </html>

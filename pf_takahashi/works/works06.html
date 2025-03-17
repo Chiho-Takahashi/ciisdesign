@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>works03</title>
+    <title>works06</title>
 
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/works.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         (function(d) {
           var config = {
@@ -48,13 +48,35 @@
                 </ul>
             </nav>
         </div>
+        <!-- ハンバーガーメニュー -->
+        <div class="hamburger">
+            <span></span>
+        </div>
+        <nav class="header_nav-sp">
+            <ul class="header_nav_list">
+                <li class="header_nav_item">
+                    <a href="../about.html">About</a>
+                </li>
+                <li class="header_nav_item">
+                    <a href="../index.html/#service">Service</a>
+                </li>
+                <li class="header_nav_item">
+                    <a href="../works.html">Works</a>
+                </li>
+                <li class="header_nav_item">
+                    <a href="../contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+
     </header>
     <main>
         <h2 class="section_title_works"><span>W</span>orks</h2>
         <div class="flex_area">
             <div class="works_detail_container_left">
                 <div class="img_detail">
-                    <div class="img_detail_wrap">
+                    <div class="img_detail_wrap02">
                         <div id=detail_circle class="circle_corlor06"></div>
                         <div class="img_detail_02">
                             <img src="../images/works_6-100.jpg" alt="トラベルメディアTRRRRIP バナー">
@@ -85,7 +107,7 @@
                         </ul>
                     </div>
                 </div>
-                <p class="desc_consept">
+                <p class="desc_consept02">
                     スクール課題のトレース作品です。<br>
                     ロゴのオレンジをアクセントカラーに使用。 タブレットをスワイプしているイメージで写真2枚を合成しました。                </p>
             </div>
@@ -100,7 +122,7 @@
                 </div>
                 <!-- spモックアップ -->
                 <div class="moc_banner_sp">
-                    <div class="capture_sp02">
+                    <div class="capture_sp06">
                         <img src="../images/works_6-100.jpg" alt="トラベルメディアTRRRRIP バナー">
                     </div>
                     <div class="moc_capture_sp_img">
@@ -164,6 +186,56 @@
             </a>
         </div>
     </footer>
+    <script>
+        $(function () {
+            // ハンバーガーメニュー
+            $(".hamburger").click(function () {
+                $(".hamburger").toggleClass("open");
+                $(".header_nav-sp").fadeToggle();
+            });
+
+            // toTopボタン
+            const $pageTop = $(".toTop");
+
+            $(window).on("scroll", function () {
+            if ($(this).scrollTop() > 100) {
+                if (!$pageTop.is(":visible")) {
+                $pageTop.fadeIn(200).css("display", "flex");
+                }
+            } else {
+                if ($pageTop.is(":visible")) {
+                $pageTop.fadeOut(200);
+                }
+            }
+
+            let scrollHeight = $(document).height(); // ドキュメントの高さ
+            let scrollPosition = $(window).height() + $(window).scrollTop(); // 現在のスクロール位置
+            let footHeight = $("footer").innerHeight(); // フッターの高さ
+
+            if (scrollHeight - scrollPosition <= footHeight) {
+                // フッターが見えたらボタンを固定ではなくabsoluteに変更
+                $pageTop.css({
+                position: "absolute",
+                bottom: footHeight + 20, // 余白を調整
+                });
+            } else {
+                $pageTop.css({
+                position: "fixed",
+                bottom: "50px",
+                });
+            }
+            });
+
+            // トップへ戻るボタンのクリックイベント
+            $("#topBtn, .toTop").on("click", function () {
+            $("html, body").animate({ scrollTop: 0 }, 400);
+            return false;
+            });
+
+
+        });
+    </script>
+
 
 </body>
 </html>

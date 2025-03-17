@@ -6,6 +6,15 @@
     <title>works01</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/works.css">
+    <link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
+
+    <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', function () {
+        new ScrollHint('.js-scrollable');
+      });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script>
         (function(d) {
@@ -35,7 +44,7 @@
         <div class="header_inner">
             <h1 class="logo">
                 <a href="../index.html">
-                    <img src="../images/header_logo.png" alt="シーズデザインロゴ">
+                    <img src="../images/header_logo.png" alt="シーズデザインロゴ"/>
                 </a>
             </h1>
             <nav class="header_nav">
@@ -47,6 +56,27 @@
                 </ul>
             </nav>
         </div>
+        <!-- ハンバーガーメニュー -->
+        <div class="hamburger">
+            <span></span>
+        </div>
+        <nav class="header_nav-sp">
+            <ul class="header_nav_list">
+                <li class="header_nav_item">
+                    <a href="../about.html">About</a>
+                </li>
+                <li class="header_nav_item">
+                    <a href="../index.html/#service">Service</a>
+                </li>
+                <li class="header_nav_item">
+                    <a href="../works.html">Works</a>
+                </li>
+                <li class="header_nav_item">
+                    <a href="../contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    
     </header>
     <main>
         <h2 class="section_title_works"><span>W</span>orks</h2>
@@ -54,18 +84,18 @@
             <div class="works_detail_container">
                 <div class="img_detail">
                     <div class="img_detail_wrap">
-                        <div id=detail_circle class="circle_corlor07"></div>
+                        <div id=detail_circle class="circle_corlor01"></div>
                         <div class="img_detail_01">
-                            <img src="../images/works_7-100.jpg" alt="DESIGN CAFEホームページ">
+                            <img src="../images/works_1-100.jpg" alt="美容室LIFE hair design ランディングページ">
                         </div>
                     </div>
                 </div>
                 <div class="works_desc">
                     <p class="w_d_tag">
-                        Web site Coding
+                        Web site Design
                     </p>
                     <p class="desc_title">
-                    「DESIGN CAFE」 HP (仮想)
+                        美容室 <span>「LIFE hair design」 LP </span>(仮想)
                     </p>
                     <div class="desc_list">
                         <ul class="desc_item">
@@ -76,17 +106,16 @@
                         </ul>
                         <ul class="desc_item_content">
                             <li class="content01_height">
-                                店舗の雰囲気やメニューを写真で伝えて、認知度と来店者数の増加を目的としたサイト。
-                                レスポンシブ対応。
+                                開業10周年を機会にwebサイトをリニューアル。 20代〜50代女性をメインのターゲットとし､認知向上・予約獲得が主な目的。
                             </li>
                             <li class="content02">
-                                コーディング
+                                素材集め/デザイン
                             </li>
                             <li class="content02">
-                                3週間
+                                10日間
                             </li>
                             <li class="content02">
-                                Visual Studio Code
+                                Illustrator / Photoshop
                             </li>
                         </ul>
                     </div>
@@ -94,45 +123,31 @@
             </div>
             <div class="desc_consept_area">
                 <p class="desc_consept">
-                    デザインカンプを基に、HTML / CSSで細かく再現しています。メインビジュアルとギャラリーはjQueryを使用し、スライドショーを実装しています。スマートフォン、タブレットにも対応しており、可変した時の文字や余白を意識しながら制作しました。
+                    美容室の全体感が分かり、お店の雰囲気や人が感じられるサイトということで、外観や店内・スタイリストの写真を載せることで美容室の様子がイメージしやすいような写真を選びました。
+                    また、コーポレートカラーのピンクを基調に彩度をおさえたピンクをアクセントに使用し、幅広い年代の女性をイメージしたシンプルで落ち着きのある印象に仕上げました。<br>
+                    予約獲得を目的としているため電話番号やWEB予約ボタンを各所に配置。営業日カレンダーや店舗からのお知らせを載せることで、より身近に感じられ、欲しい情報が得られるデザインを目指しました。
                 </p>
             </div>
         </div>
+        <!-- PCモックアップ -->
         
-        <div class="moc_area_3">
-            <!-- PCモックアップ -->
-            <div class="moc_capture_pc08">
-                <figure class="capture_pc_p" style="-ms-overflow-style: none; scrollbar-width: none;">
-                    <img src="../images/works_07_pc_chapter.jpg" alt="DESIGN CAFEホームページ PC">
-                </figure>
-                <div class="moc_capture_pc_img_p">
-                    <img src="../images/moc_pc.png" alt="パソコン">
+        <div class="moc_area">
+            <div class="moc_capture_pc">
+                <div class="moc_scroll_container js-scrollable">
+                    <img src="../images/works_01_chapter.jpg" alt="LIFE hair design ランディングページ パソコンcapture">
                 </div>
-                <div class="shadow03">
-                    <img src="../images/moc_pc_shadow.png">
+                <div class="moc_capture_pc_img">
+                    <img src="../images/moc_notepc.png" alt="パソコン">
                 </div>
-            </div>
-            <!-- spモックアップ -->
-            <div class="moc_capture_sp02">
-                <figure class="capture_sp_p" style="-ms-overflow-style: none; scrollbar-width: none;">
-                    <img src="../images/works_07_sp_chapter.jpg" alt="DESIGN CAFEホームページ_スマホ">
-                </figure>
-                <div class="capture_sp_pc_img">
-                    <img src="../images/moc_sp_pc.png" alt="スマホ">
-                </div>
-                <div class="shadow02">
-                    <img src="../images/moc_pc_shadow.png">
+                <div class="shadow04">
+                    <img src="../images/moc_notepc_shadow.png">
                 </div>
             </div>
-
-            <!-- スクロール -->
-            <!-- <div class="scroll_arrow02">
-                <div class="scroll">
-                    <span>scroll</span>
-                </div>
-            </div> -->
-
         </div>
+        
+
+
+
         <!-- ボタン ホバーで色変換・矢印右へ -->
         <div class="btn">
             <a href="../works.html" class="btn_arrow">
@@ -140,7 +155,6 @@
             </a>
         </div>
     </main>
-
     <footer>
         <div class="footer_container">
             <div class="footer_logo">
@@ -186,6 +200,72 @@
             </a>
         </div>
     </footer>
-    
+    <script>
+        $(function () {
+            // ハンバーガーメニュー
+            $(".hamburger").click(function () {
+                $(".hamburger").toggleClass("open");
+                $(".header_nav-sp").fadeToggle();
+            });
+            
+            const $pageTop = $(".toTop");
+
+            $(window).on("scroll", function () {
+            if ($(this).scrollTop() > 100) {
+                if (!$pageTop.is(":visible")) {
+                $pageTop.fadeIn(200).css("display", "flex");
+                }
+            } else {
+                if ($pageTop.is(":visible")) {
+                $pageTop.fadeOut(200);
+                }
+            }
+
+            let scrollHeight = $(document).height(); // ドキュメントの高さ
+            let scrollPosition = $(window).height() + $(window).scrollTop(); // 現在のスクロール位置
+            let footHeight = $("footer").innerHeight(); // フッターの高さ
+
+            if (scrollHeight - scrollPosition <= footHeight) {
+                // フッターが見えたらボタンを固定ではなくabsoluteに変更
+                $pageTop.css({
+                position: "absolute",
+                bottom: footHeight + 20, // 余白を調整
+                });
+            } else {
+                $pageTop.css({
+                position: "fixed",
+                bottom: "50px",
+                });
+            }
+            });
+
+            // トップへ戻るボタンのクリックイベント
+            $("#topBtn, .toTop").on("click", function () {
+            $("html, body").animate({ scrollTop: 0 }, 400);
+            return false;
+            });
+
+            // スクロールヒント
+            document.addEventListener('DOMContentLoaded', function () {
+                new ScrollHint('.js-scrollable', {
+                    scrollHintIconAppendClass: 'scroll-hint-icon-white',
+                    suggestiveShadow: true,
+                    scrollDirection: 'y'
+                });
+
+                // スクロールしたらアイコンを消す
+                const scrollableElement = document.querySelector('.js-scrollable');
+                    scrollableElement.addEventListener('scroll', function () {
+                        document.querySelectorAll('.scroll-hint-icon').forEach(el => {
+                            el.style.display = 'none'; // アイコンを完全に非表示
+                    });
+                });
+            });
+
+
+        });
+    </script>
+
+
 </body>
 </html>
