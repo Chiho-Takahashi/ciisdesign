@@ -91,7 +91,6 @@
   animation-delay: 6s;
   animation-fill-mode: forwards;
   opacity: 0;
-
 }
 @keyframes fadeTopAnime {
   from {
@@ -103,6 +102,19 @@
     transform: translateY(30px);
   }
 }
+.header_inner_ather {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 50px;
+  padding-right: 7.8%;
+  padding-left: 6.2%;
+  animation-name: fadeTopAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
 #header{
   position: relative;
   z-index: 9999;
@@ -358,9 +370,9 @@
   }
 }
  
-.blurTrigger{
+/* .blurTrigger{
     opacity: 0;
-}
+} */
 .consept {
   position: relative;
   max-width: 1600px;
@@ -462,9 +474,10 @@
 }
 
 /* 上下のアニメーション*/
-.downAnime{
-    opacity: 0;/* 事前に透過0 にして消しておく*/
-}
+/* 事前に透過0 にして消しておく*/
+/* .downAnime{
+    opacity: 0;
+} */
 
 .slideAnimeDownUp {
     animation-name:slideTextY100;
@@ -648,7 +661,7 @@
 
   transform-origin: 0 0;
 }
-/* 横スクロール */
+/* work_スライダー */
 #works {
   overflow-x: hidden;
 }
@@ -659,7 +672,7 @@
 }
 .sticky_wrap {
   display: flex;
-  height: 440px;
+  height: 390px;
 }
 .works_img_1{
   width: 80%;
@@ -693,7 +706,6 @@
 }
 .hover-mask {
   align-items: center; /* テキストの中央揃え */
-  /* background: rgba(0, 0, 0, .5);  */
   bottom: 0;
   color: #fff; /* テキストの色 */
   display: flex; /* テキストの中央揃え */
@@ -738,62 +750,63 @@
 
 .scroll_item01 {
   position: relative;
-  max-width: 440px;
+  max-width: 390px;
   border-radius: 50%;
   background-color: #F2EBEC;
   aspect-ratio: 1/1;
   cursor: pointer;
   overflow: hidden;
+  margin-right: 20px;
 }
 .scroll_item02 {
   position: relative;
-  max-width: 440px;
+  max-width: 390px;
   border-radius: 50%;
   background-color: #938279;
   aspect-ratio: 1/1;
   cursor: pointer;
   overflow: hidden;
-
+  margin-right: 20px;
 }
 .scroll_item03 {
   position: relative;
-  max-width: 440px;
+  max-width: 390px;
   border-radius: 50%;
   background-color: #F4D798;
   aspect-ratio: 1/1;
   cursor: pointer;
   overflow: hidden;
-
+  margin-right: 20px;
 }
 .scroll_item07 {
   position: relative;
-  max-width: 440px;
+  max-width: 390px;
   border-radius: 50%;
   background-color: #F2E9DA;
   aspect-ratio: 1/1;
   cursor: pointer;
   overflow: hidden;
-
+  margin-right: 20px;
 }
 .scroll_item08 {
   position: relative;
-  max-width: 440px;
+  max-width: 390px;
   border-radius: 50%;
   background-color: #B3C9C3;
   aspect-ratio: 1/1;
   cursor: pointer;
   overflow: hidden;
-
+  margin-right: 20px;
 }
 .scroll_item09 {
   position: relative;
-  max-width: 440px;
+  max-width: 390px;
   border-radius: 50%;
   background-color: #72A09A;
   aspect-ratio: 1/1;
   cursor: pointer;
   overflow: hidden;
-
+  margin-right: 20px;
 }
 @media screen and (max-width: 1200px) {
   .sticky_wrap {
@@ -830,6 +843,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 21px;
+  width: 100%;
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   letter-spacing: .1em;
   text-align: center;
@@ -933,7 +947,7 @@ html {
   width: 100%;
   height: 1020px;
   margin-top: 130px;
-  background-image: url("/images/contact_back@0.5x.png");
+  background-image: url("../images/contact_back@0.5x.png");
   background-position: left bottom;
   background-size: 99.8% 100%;
   background-repeat: no-repeat;
@@ -994,7 +1008,6 @@ html {
 }
 .footer_nav_list {
   display: flex;
-
   gap: 53px;
 }
 .footer_nav_item {
@@ -1215,7 +1228,7 @@ footer {
   }
   .footer_back_move_2 {
     right: 266px;
-    bottom: 225px;
+    bottom: 136px;
     width: 88px;
   }
   .bg-area {
@@ -1387,6 +1400,7 @@ footer {
   }
   .btn_triangle_text_w {
     font-size: 14px;
+    width: 100%;
   }
   .btn_triangle_c {
     left: 50%;
@@ -1539,8 +1553,8 @@ footer {
     height: 1080px;
     background-size: 135% 94%;
     margin-top: 0px;
-    }
   }
+  
   .footer_container {
     display: flex;
     position: absolute;
@@ -1576,6 +1590,7 @@ footer {
     font-size: 11px;
   }
 
+}
 @media screen and (max-width: 620px) {
   .main-visual {
     margin-left: -4%;
@@ -1641,6 +1656,7 @@ footer {
   .btn_triangle_text {
     font-size: 17px;
     line-height: 1;
+    width: 100%;
   }
   .btn_triangle span {
     font-size: 11px;
@@ -1818,7 +1834,7 @@ footer {
     top: -100px;
     left: 6%;
   }
-  } 
+} 
 @media screen and (max-width: 380px) {
   .main-visual {
     margin-left: -12%;
@@ -1833,6 +1849,19 @@ footer {
 .about_container {
   max-width: 1200px;
   margin: auto;
+}
+.logo_about {
+  width: 110px;
+  top: 77px;
+  left: 4.2%;
+  z-index: 200;
+}
+
+.section_subtitle_about {
+  width: 268px;
+  align-items: end;
+  font-size: 17px;
+  text-align: right;
 }
 .about_title {
   position: relative;
@@ -1861,7 +1890,7 @@ footer {
   width: 1200px;
   height: 740px;
   border-radius: 90px;
-  background-image: url("/images/about_bg.png");
+  background-image: url("../images/about_bg.png");
   background-size: 105% 105%;
   background-repeat: no-repeat;
 }
@@ -2113,9 +2142,9 @@ footer {
   transform-origin: 0 0;
 }
 .logo_consept {
-  margin-top: 65px;
-  font-size: 17px;
-  line-height: 2.1;
+  margin-top: 67px;
+  font-size: 16px;
+  line-height: 2.2;
 }
 .logo_consept span {
   font-size: 80%;

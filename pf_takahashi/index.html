@@ -456,16 +456,16 @@
         <nav class="footer_nav">
           <ul class="footer_nav_list">
             <li class="footer_nav_item">
-              <a href="./about.html">About</a>
+              <a href="about.html">About</a>
             </li>
             <li class="footer_nav_item">
               <a href="#service">Service</a>
             </li>
             <li class="footer_nav_item">
-              <a href="./works.html">Works</a>
+              <a href="works.html">Works</a>
             </li>
             <li class="footer_nav_item">
-              <a href="#contact">Contact</a>
+              <a href="contact.html#contact">Contact</a>
             </li>
           </ul>
         </nav>
@@ -483,7 +483,7 @@
       </div>
       <div class="bg-area">
         <picture>
-          <source srcset="./images/footer_5.png" media="(min-width: 768px)" />
+          <source srcset="./images/footer_5.png" media="(min-width: 769px)" />
           <img src="./images/footer_sp_2.png" alt="" />
         </picture>
       </div>
@@ -496,146 +496,7 @@
       </div>
     </footer>
 
-    <script>
-      $(function () {
-        $(window).on("load", function () {
-          // まずリストの要素を非表示にしておく
-          $("ul.main-visual li").hide();
+    <script src="js/main.js"></script>
 
-          setTimeout(function () {
-            $("#loading").stop().fadeOut(300, function () {
-              // ローディングが完全に消えた後に実行
-              $("main").addClass("on");
-
-              // フェードイン開始
-              $("ul.main-visual li").each(function (i) {
-                $(this).delay(1100 * i).fadeIn(900);
-              });
-            });
-          }, 3000);
-        });
-  
-
-        const $pageTop = $(".toTop");
-
-        $(window).on("scroll", function () {
-          if ($(this).scrollTop() > 100) {
-            if (!$pageTop.is(":visible")) {
-              $pageTop.fadeIn(200).css("display", "flex");
-            }
-          } else {
-            if ($pageTop.is(":visible")) {
-              $pageTop.fadeOut(200);
-            }
-          }
-
-          let scrollHeight = $(document).height(); // ドキュメントの高さ
-          let scrollPosition = $(window).height() + $(window).scrollTop(); // 現在のスクロール位置
-          let footHeight = $("footer").innerHeight(); // フッターの高さ
-
-          if (scrollHeight - scrollPosition <= footHeight) {
-            // フッターが見えたらボタンを固定ではなくabsoluteに変更
-            $pageTop.css({
-              position: "absolute",
-              bottom: footHeight + 20, // 余白を調整
-            });
-          } else {
-            $pageTop.css({
-              position: "fixed",
-              bottom: "50px",
-            });
-          }
-        });
-
-        // トップへ戻るボタンのクリックイベント
-        $("#topBtn, .toTop").on("click", function () {
-          $("html, body").animate({ scrollTop: 0 }, 400);
-          return false;
-        });
-
-        // ハンバーガーメニュー
-        $(".hamburger").click(function () {
-          $(".hamburger").toggleClass("open");
-          $(".header_nav-sp").fadeToggle();
-        });
-
-        // 横スクロール
-        $(".slider").slick({
-          loop: true,
-          autoplay: true,
-          autoplaySpeed: 0,
-          speed: 40000,
-          infinite: true,
-          cssEase: "linear",
-          swipe: true,
-          arrows: false,
-
-          responsive: [
-            {
-              breakpoint: 768,
-              settings: "unslick"
-            }
-          ]
-        });
-
-
-        function BlurTextAnimeControl() {
-          $('.blurTrigger').each(function(){ //blurTriggerというクラス名が
-            var elemPos = $(this).offset().top-50;//要素より、50px上の
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll >= elemPos - windowHeight){
-            $(this).addClass('blur');// 画面内に入ったらblurというクラス名を追記
-            }else{
-            $(this).removeClass('blur');// 画面外に出たらblurというクラス名を外す
-            }
-            });
-        }
-
-        // 画面をスクロールをしたら動かしたい場合の記述
-        $(window).scroll(function () {
-          BlurTextAnimeControl();/* アニメーション用の関数を呼ぶ*/
-        });// ここまで画面をスクロールをしたら動かしたい場合の記述
-
-        // 画面が読み込まれたらすぐに動かしたい場合の記述
-        $(window).on('load', function () {
-          BlurTextAnimeControl();/* アニメーション用の関数を呼ぶ*/
-        });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
-
-
-
-        function slideAnime(){
-	//====下に動くアニメーションここから===
-        $('.downAnime').each(function(){
-            var elemPos = $(this).offset().top-50;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll >= elemPos - windowHeight){
-            // 下から上へ表示するクラスを付与
-            // テキスト要素を挟む親要素（下）とテキスト要素を元位置でアニメーションをおこなう
-            $(this).addClass("slideAnimeDownUp");
-            // 要素を下枠外に移動しCSS アニメーションで下から元の位置に移動
-            $(this).children(".downAnimeInner").addClass("slideAnimeUpDown");
-            // 子要素は親要素のアニメーションに影響されないように逆の指定をし元の位置をキープするアニメーションをおこなう
-            }else{
-            // 下から上へ表示するクラスを取り除く
-            $(this).removeClass("slideAnimeDownUp");
-            $(this).children(".downAnimeInner").removeClass("slideAnimeUpDown");
-            }
-        });
-          }
-          
-          // 画面をスクロールをしたら動かしたい場合の記述
-          $(window).scroll(function (){
-            slideAnime();/* アニメーション用の関数を呼ぶ*/
-          });// ここまで画面をスクロールをしたら動かしたい場合の記述
-
-          // 画面が読み込まれたらすぐに動かしたい場合の記述
-          $(window).on('load', function(){
-            slideAnime();/* アニメーション用の関数を呼ぶ*/
-          });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
-        
-      });
-    </script>
   </body>
 </html>

@@ -10,12 +10,27 @@
     width: 100%;
     z-index: -1;
 }
-.header_inner{
-    display: flex;
-    justify-content: space-between;
-    padding-right: 7.8%;
-    padding-left: 6.2%;
-    margin-top: 77px;
+.header_inner_works{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 50px;
+  padding-right: 7.8%;
+  padding-left: 6.2%;
+  animation-name: fadeTopAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes fadeTopAnime {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(30px);
+  }
 }
 #header{
     position: relative;
