@@ -5,51 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ciis design portfolio</title>
     <link rel="stylesheet" href="./css/reset.css" />
-    <!-- slickのCSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css"
-    />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- slickのJavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
-      (function (d) {
-        var config = {
-            kitId: "qyp0btg",
-            scriptTimeout: 3000,
-            async: true,
-          },
-          h = d.documentElement,
-          t = setTimeout(function () {
-            h.className =
-              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-          }, config.scriptTimeout),
-          tk = d.createElement("script"),
-          f = false,
-          s = d.getElementsByTagName("script")[0],
-          a;
-        h.className += " wf-loading";
-        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
-        tk.async = true;
-        tk.onload = tk.onreadystatechange = function () {
-          a = this.readyState;
-          if (f || (a && a != "complete" && a != "loaded")) return;
-          f = true;
-          clearTimeout(t);
-          try {
-            Typekit.load(config);
-          } catch (e) {}
-        };
-        s.parentNode.insertBefore(tk, s);
-      })(document);
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> --> 
+
     <script>
       (function (d) {
         var config = {
@@ -147,7 +108,6 @@
         </nav>
       </header>
       <div class="sticky_area">
-        <!-- <div class="main_area"> -->
         <div class="sticky">
           <div class="main_area">
             <ul class="main-visual">
@@ -208,7 +168,6 @@
         <div class="main_title">
           <img src="./images/title.png" alt="たかはしちほポートフォリオ" />
         </div>
-        <!-- </div> -->
 
         <div class="consept">
           <div class="consept_area">
@@ -317,7 +276,7 @@
       <section id="works">
         <div class="scroll_container">
           <div class="works_container">
-            <div class="horizontal_scroll">
+            
               <div class="works_title_area">
                 <div class="section_title_works">
                   <h3 class="section_title"><span>W</span>orks</h3>
@@ -325,83 +284,65 @@
                   <p class="section_subtitle_w">制作実績</p>
                 </div>
               </div>
-              <div class="sticky_wrap slider">
-                <div class="scroll_contents_works01 scroll_item01">
-                  <a href="./works/works01.html">
-                    <div class="circle_1"></div>
-                    <div class="works_img_1">
-                      <img
-                        src="./images/works_1-100.jpg"
-                        alt="美容室LIFE hair design ランディングページ"
-                      />
+              
+              <div class="works_inner">
+                <ul class="works_list">
+                  <li class="scroll_item08">
+                    <a href="./works/works08.html">
+                      <div class="circle_8"></div>
+                      <div class="works_img_1">
+                        <img
+                          src="./images/works_8-100.jpg"
+                          alt="たかはしちほポートフォリオ"
+                        />
                       </div>
-                    <p class="hover-mask">
-                      美容室  「LIFE hair design」
-                    </p>
-                  </a>
-                </div>
-                <div class="scroll_contents_works02 scroll_item02">
-                  <a href="./works/works02.html">
-                    <div class="circle_2"></div>
-                    <div class="works_img_1">
-                      <img
-                        src="./images/works_2-100.jpg"
-                        alt="新ハンバーガーSNS告知 高級ver."
-                      />
-                    </div>
-                    <p class="hover-mask">新ハンバーガー SNS告知「高級ver.」</p>
-                  </a>
-                </div>
-                <div class="scroll_contents_works03 scroll_item03">
-                  <a href="./works/works03.html">
-                    <div class="circle_3"></div>
-                    <div class="works_img_2">
-                      <img
-                        src="./images/works_3-100.jpg"
-                        alt="新ハンバーガーSNS告知 POPver."
-                      />
-                    </div>
-                    <p class="hover-mask">新ハンバーガー SNS告知「POPver.」</p>
-                  </a>
-                </div>
-                <div class="scroll_contents_works07 scroll_item07">
-                  <a href="./works/works07.html">
-                    <div class="circle_7"></div>
-                    <div class="works_img_1">
-                      <img
-                        src="./images/works_7-100.jpg"
-                        alt="DESIGN CAFEホームページ"
-                      />
-                    </div>
-                    <p class="hover-mask">「DESIGN CAFE」 HP</p>
-                  </a>
-                </div>
-                <div class="scroll_contents_works09 scroll_item09">
-                  <a href="./works/works09.html">
-                    <div class="circle_9"></div>
-                    <div class="works_img_1">
-                      <img
-                        src="./images/works_9_1-100.png"
-                        alt="ciis designロゴ"
-                      />
-                    </div>
-                    <p class="hover-mask">ciis design ロゴ</p>
-                  </a>
-                </div>
-                <div class="scroll_contents_works08 scroll_item08">
-                  <a href="./works/works08.html">
-                    <div class="circle_8"></div>
-                    <div class="works_img_1">
-                      <img
-                        src="./images/works_8-100.jpg"
-                        alt="たかはしちほポートフォリオ"
-                      />
-                    </div>
-                    <p class="hover-mask">Takahashi Chihoポートフォリオ</p>
-                  </a>
-                </div>
+                      <p class="hover-mask">Takahashi Chihoポートフォリオ</p>
+                    </a>
+                  </li>
+
+                  <li class="scroll_item01">
+                    <a href="./works/works01.html">
+                      <div class="circle_1"></div>
+                      <div class="works_img_1">
+                        <img
+                          src="./images/works_1-100.jpg"
+                          alt="美容室LIFE hair design ランディングページ"
+                        />
+                        </div>
+                      <p class="hover-mask">
+                        美容室  「LIFE hair design」
+                      </p>
+                    </a>
+                  </li>
+
+                  <li class="scroll_item10">
+                    <a href="./works/works10.html">
+                      <div class="circle_10"></div>
+                      <div class="works_img_2">
+                        <img
+                          src="./images/works_10-100.jpg"
+                          alt="高級焼鳥屋「炭火焼鳥 とりや和」ロゴ"
+                        />
+                      </div>
+                      <p class="hover-mask">高級焼鳥屋「炭火焼鳥 とりや和」ロゴ</p>
+                    </a>
+                  </li>
+
+                  <li class="scroll_item11">
+                    <a href="./works/works11.html">
+                      <div class="circle_11"></div>
+                      <div class="works_img_2">
+                        <img
+                          src="./images/works_11-100.jpg"
+                          alt="高級焼鳥屋「炭火焼鳥 とりや和」オープンチラシ"
+                        />
+                      </div>
+                      <p class="hover-mask">高級焼鳥屋「炭火焼鳥 とりや和」<br>オープンチラシ</br></p>
+                    </a>
+                  </li>
+                </ul>
               </div>
-            </div>
+            
             <div class="works_background"></div>
           </div>
 
@@ -496,7 +437,10 @@
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
 
+    
+
+    
   </body>
 </html>

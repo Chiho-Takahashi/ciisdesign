@@ -14,27 +14,47 @@ $(function(){
             });
           });
         }, 3000);
-      });
+    });
 
     // work スライダー
-    $(".slider").slick({
-        loop: true,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 45000,
-        infinite: true,
-        cssEase: "linear",
-        swipe: true,
-        arrows: false,
 
-        responsive: [
-            {
-            breakpoint: 768,
-            settings: "unslick"
-            }
-        ]
-    });
+    // $(".slider").slick({
+    //     loop: true,
+    //     autoplay: true,
+    //     autoplaySpeed: 0,
+    //     speed: 45000,
+    //     infinite: true,
+    //     cssEase: "linear",
+    //     swipe: true,
+    //     arrows: false,
+
+    //     responsive: [
+    //         {
+    //         breakpoint: 768,
+    //         settings: "unslick"
+    //         }
+    //     ]
+    // });
   
+    // $(".slider").slick({
+    //     autoplay: true, // 自動再生ON
+    //     dots: true, // ドットインジケーターON
+    //     centerMode: true, // 両サイドに前後のスライド表示
+    //     centerPadding: '0px', // 左右のスライドのpadding
+    //     slidesToScroll: 1,
+    //     slidesToShow: 3, // 一度に表示するスライド数
+    //     autoplaySpeed: 3000,  // 3秒ごと
+    //     speed: 500,
+    //     infinite: true,
+
+    //     responsive: [
+    //         {
+    //         breakpoint: 768,
+    //         settings: "unslick"
+    //         }
+    //     ]
+
+    // });
 
     // 変数に要素を入れる
     var trigger = $('.modal__trigger'),

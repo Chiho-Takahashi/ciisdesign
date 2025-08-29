@@ -625,11 +625,12 @@
   position: relative;
   margin-top: 257px;
   margin-bottom: 113px;
+  overflow: hidden;
 }
 .works_background {
   position: absolute;
   bottom: -10%;
-  left: 600px;
+  left: 240px;
   z-index: -1;
   width: 3000px;
   height: 155px;
@@ -639,16 +640,17 @@
   background-size: contain;
   background-repeat: repeat;
 }
-.works_title_area {
-  display: flex;
+/* .works_title_area {
   justify-content: center;
   align-items: center;
   min-width: 600px;
-}
+} */
 .section_title_works {
   position: relative;
   width: 230px;
   height: 59px;
+  margin: auto;
+  margin-bottom: 100px;
 }
 .section_title_works div {
   position: absolute;
@@ -661,21 +663,23 @@
 
   transform-origin: 0 0;
 }
-/* work_スライダー */
-#works {
-  overflow-x: hidden;
-}
+/* work_リスト */
+
 .scroll_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.sticky_wrap {
+.works_list {
   display: flex;
-  height: 390px;
+  height: 280px;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: center;
+  gap: 30px;
 }
 .works_img_1{
-  width: 80%;
+  width: 77%;
   border-radius: 9px;
   overflow: hidden;
   position: absolute;
@@ -685,22 +689,12 @@
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
 }
 .works_img_2{
-  width: 65%;
+  max-width: 65%;
   border-radius: 9px;
   overflow: hidden;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
-}
-.works_img_3{
-  width: 75%;
-  border-radius: 9px;
-  overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 52%;
   transform: translate(-50%,-50%);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
 }
@@ -723,15 +717,11 @@
   background: rgba(0, 0, 0, .5);
   opacity: 1; /* hoverしたら透過しない(表示させる) */
 }
-.scroll_item02:hover .hover-mask{
+.scroll_item10:hover .hover-mask{
   background: rgba(0, 0, 0, .5);
   opacity: 1; /* hoverしたら透過しない(表示させる) */
 }
-.scroll_item03:hover .hover-mask{
-  background: rgba(0, 0, 0, .5);
-  opacity: 1; /* hoverしたら透過しない(表示させる) */
-}
-.scroll_item07:hover .hover-mask{
+.scroll_item11:hover .hover-mask{
   background: rgba(0, 0, 0, .5);
   opacity: 1; /* hoverしたら透過しない(表示させる) */
 }
@@ -739,103 +729,74 @@
   background: rgba(0, 0, 0, .5);
   opacity: 1; /* hoverしたら透過しない(表示させる) */
 }
-.scroll_item09:hover .hover-mask{
-  background: rgba(0, 0, 0, .5);
-  opacity: 1; /* hoverしたら透過しない(表示させる) */
-}
 .hover-mask p {
   width: 80%; /* テキストを横幅いっぱいにならないようにする */
 }
 
-
-.scroll_item01 {
-  position: relative;
-  max-width: 390px;
-  border-radius: 50%;
-  background-color: #F2EBEC;
-  aspect-ratio: 1/1;
-  cursor: pointer;
-  overflow: hidden;
-  margin-right: 20px;
-}
-.scroll_item02 {
-  position: relative;
-  max-width: 390px;
-  border-radius: 50%;
-  background-color: #938279;
-  aspect-ratio: 1/1;
-  cursor: pointer;
-  overflow: hidden;
-  margin-right: 20px;
-}
-.scroll_item03 {
-  position: relative;
-  max-width: 390px;
-  border-radius: 50%;
-  background-color: #F4D798;
-  aspect-ratio: 1/1;
-  cursor: pointer;
-  overflow: hidden;
-  margin-right: 20px;
-}
-.scroll_item07 {
-  position: relative;
-  max-width: 390px;
-  border-radius: 50%;
-  background-color: #F2E9DA;
-  aspect-ratio: 1/1;
-  cursor: pointer;
-  overflow: hidden;
-  margin-right: 20px;
-}
 .scroll_item08 {
   position: relative;
-  max-width: 390px;
+  max-width: 280px;
   border-radius: 50%;
   background-color: #B3C9C3;
   aspect-ratio: 1/1;
   cursor: pointer;
   overflow: hidden;
-  margin-right: 20px;
 }
-.scroll_item09 {
+.scroll_item01 {
   position: relative;
-  max-width: 390px;
+  max-width: 280px;
   border-radius: 50%;
-  background-color: #72A09A;
+  background-color: #F2EBEC;
   aspect-ratio: 1/1;
   cursor: pointer;
   overflow: hidden;
-  margin-right: 20px;
 }
+.scroll_item10 {
+  position: relative;
+  max-width: 280px;
+  border-radius: 50%;
+  background-color: #ceccc2;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  overflow: hidden;
+}
+.scroll_item11 {
+  position: relative;
+  max-width: 280px;
+  border-radius: 50%;
+  background-color: #d3cab2;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 1200px) {
-  .sticky_wrap {
-    height: 300px;
-  }
   .works_title_area {
     min-width: 300px;
   }
-  .scroll_item {
-    max-width: 300px;
+  .works_list {
+    max-width: 1000px;
+    height: 235px;
   }
   .works_background {
-    left: 300px;
+    left: 100px;
   }
+   .scroll_item08 {
+    max-width: 250px;
+  }
+  .scroll_item01 {
+    max-width: 250px;
+  }
+  .scroll_item10 {
+    max-width: 250px;
+  }
+  .scroll_item11 {
+    max-width: 250px;
+  }
+  
 }
 
-.horizontal_scroll {
-  display: flex;
-}
-.works_img_1, .works_img_2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-}
-.works_img_2 {
-  width: 65%;
-}
+
 /* works ボタン ホバーで色変換・▶️回転 */
 .btn_triangle_text_w {
   position: absolute;
@@ -1052,6 +1013,9 @@ footer {
     top: -165px;
     left: 45%;
   }
+  .works_list {
+  gap: 16px;
+  }
   .contact_container {
     flex-direction: column;
     left: 40%;
@@ -1084,34 +1048,12 @@ footer {
     right: 11%;
   }
 }
-@media screen and (max-width: 1200px) {
-   /* works */
-   .scroll_item01{
-    max-width: 300px;
-  }
-  .scroll_item02{
-    max-width: 300px;
-  }
-  .scroll_item03{
-    max-width: 300px;
-  }
-  .scroll_item07{
-    max-width: 300px;
-  }
-  .scroll_item08{
-    max-width: 300px;
-  }
-  .scroll_item09{
-    max-width: 300px;
-  }
-
-}
 @media screen and (max-width: 1024px) {
   .header_inner {
     margin-top: 45px;
   }
   .works_background {
-    height: 70px;
+    height: 100px;
     border-top-left-radius: 20px;
   }
   .main-visual {
@@ -1199,6 +1141,11 @@ footer {
   .section_title_contact {
     width: 310px;
   }
+  /* works */
+  .scroll_item11 {
+    display: none;
+  }
+
   .section_title_contact div {
     top: 83%;
     left: 60%;
@@ -1240,8 +1187,6 @@ footer {
     margin-bottom: 30px;
   }
 
-
-
   /* about */
   .about_wrap {
     width: auto;
@@ -1261,7 +1206,12 @@ footer {
     font-size: 27px;
   }
 }
+@media screen and (max-width: 850px) {
+  .works_list{
+    gap: 15px;
+  }
 
+}
 @media screen and (max-width: 768px) {
   #header {
     position: fixed;
@@ -1477,41 +1427,29 @@ footer {
   .section_title_contact div {
     left: 56%;
   }
-  .works_wrap {
-    flex-direction: column;
 
-  }
-  .scroll_item01{
-    max-width: 400px;
-  }
-  .scroll_item02{
-    max-width: 400px;
-  }
-  .scroll_item09{
-    max-width: 400px;
-  }
-  .scroll_item03 {
-    display: none;
-  }
   .scroll_item08 {
-    display: none;
+    max-width: 350px;
   }
-  .scroll_item07 {
-    display: none;
+  .scroll_item01 {
+    max-width: 350px;
   }
-  .sticky_wrap {
+  .scroll_item10 {
+    max-width: 350px;
+  }
+  .scroll_item11 {
+    max-width: 350px;
+  }
+  .works_list {
     flex-direction: column;
-    max-width: 400px;
+    max-width: 350px;
     width: 100%;
     height: 100%;
-    gap: 25px;
-    margin: auto;
-    padding: 0 50px;
   }
   .works_background {
-    height: 84px;
+    height: 150px;
     left: 134px;
-    bottom: -44px;
+    bottom: -50px;
 }
   /* 768_home/about/contact_footer */
   .footer_back_move_1 {
@@ -1729,7 +1667,6 @@ footer {
   }
   .section_title_works {
     width: 158px;
-    margin-left: 0;
   }
   .section_title_works div {
     top: 69%;
@@ -1738,10 +1675,9 @@ footer {
     height: 1px;
   }
   .works_background {
-    width: 90%;
-    height: 80px;
-    left: 70px;
-    bottom: -44px;
+    height: 100px;
+    left: 30px;
+    bottom: -35px;
   }
   .section_subtitle_w {
     width: 174px;
