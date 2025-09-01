@@ -626,6 +626,7 @@
   margin-top: 257px;
   margin-bottom: 113px;
   overflow: hidden;
+  padding-bottom: 20px;
 }
 .works_background {
   position: absolute;
@@ -1220,7 +1221,9 @@ footer {
     z-index: 9999;
     width: 100%;
   }
-
+  .header_inner_ather{
+    margin-top: 0;
+  }
   /* ハンバーガーメニュー */
   .header_nav {
     display: none;
@@ -1608,8 +1611,8 @@ footer {
     margin-top: 0;
   }
   .section_title_service div {
-    top: 98%;
-    left: 50%;
+    top: 72%;
+    left: 46%;
     width: 44px;
     height: 1px;
   }
@@ -1657,6 +1660,18 @@ footer {
   .works_2 {
     width: 70%;
     margin-right: 0;
+  }
+  .works_list {
+    max-width: 300px;
+  }
+  .scroll_item08 {
+    max-width: 300px;
+  }
+  .scroll_item01 {
+    max-width: 300px;
+  }
+  .scroll_item10 {
+    max-width: 300px;
   }
 
   .sp-only {
@@ -1770,6 +1785,9 @@ footer {
     top: -100px;
     left: 6%;
   }
+  .section_subtitle_about {
+    width: 215px;
+  }
 } 
 @media screen and (max-width: 380px) {
   .main-visual {
@@ -1794,7 +1812,6 @@ footer {
 }
 
 .section_subtitle_about {
-  width: 268px;
   align-items: end;
   font-size: 17px;
   text-align: right;
@@ -2256,6 +2273,10 @@ footer {
 }
 /*768_about*/
 @media screen and (max-width: 768px) {
+  .logo_about{
+    width: 70px;
+  }
+
   .about_bg {
     height: 947px;
     margin: auto;
@@ -2327,11 +2348,9 @@ footer {
     margin-bottom: 7px;
     font-size: 21px;
     letter-spacing: .13em;
-    text-align: center;
   }
   .my_name_a {
     font-size: 12px;
-    text-align: center;
   }
   .about_me {
     font-size: 14px;
