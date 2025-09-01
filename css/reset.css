@@ -18,7 +18,7 @@ dl {
   line-height: 1;
   font-weight: normal;
   color: #353B3F;
-  font-family: 'TsukuARdGothic-Regular',sans-serif;
+  font-family: 'TsukuARdGothic-Regular','M PLUS Rounded 1c', 'Hiragino Maru Gothic Pro', 'Yu Gothic Rounded', sans-serif;
   font-feature-settings: "palt";
 }
 a {
