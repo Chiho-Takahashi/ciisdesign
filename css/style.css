@@ -1637,7 +1637,7 @@ footer {
   }
   .service_content {
     font-size: 13px;
-    padding: 0 10.6%;
+    padding: 0 10.6% 20px 10.6%;
     letter-spacing: 0;
     line-height: 1.7;
   }

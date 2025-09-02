@@ -104,7 +104,7 @@
 }
 /* ホバーすると画像が拡大 */
 .work_wrap{
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%;
 }
 .work_wrap :hover  .works_img_1 img {
@@ -1375,6 +1375,10 @@ footer {
     /* .desc_title02{
         margin-bottom: 0;
     } */
+
+    .works_img_1{
+        overflow: hidden;
+    }
 
     .sp_moc{
         margin: 20px auto;
