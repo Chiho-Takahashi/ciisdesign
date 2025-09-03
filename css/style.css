@@ -815,7 +815,7 @@
 #contact {
   position: relative;
   z-index: 101;
-  padding-top: var(--horizontal-width, 100px); /* デフォルト値 100px */
+  /* padding-top: var(--horizontal-width, 100px); デフォルト値 100px */
 }
 .contact_container {
   display: flex;
@@ -1609,6 +1609,7 @@ footer {
   .section_title_service {
     width: 223px;
     margin-top: 0;
+    margin-bottom: 30px;
   }
   .section_title_service div {
     top: 72%;
@@ -1653,6 +1654,13 @@ footer {
     margin: 38px 0 32px;
     font-size: 14px;
   }
+  .works_container {
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+  .section_title_works {
+    margin-bottom: 0;
+  }
   .works_1 {
     width: 70%;
     margin-right: 0;
@@ -1678,7 +1686,7 @@ footer {
     display: block;
   }
   .works_title_area {
-    margin: 0 auto 60px;
+    margin: 0 auto 30px;
   }
   .section_title_works {
     width: 158px;
@@ -1710,7 +1718,7 @@ footer {
     font-size: 13px;
   }
   .section_subtitle {
-    width: 221px;
+    width: 233px;
   }
   .section_title_contact div {
     position: absolute;
@@ -1725,7 +1733,7 @@ footer {
     margin-top: 144px;
   }
   .contact_content {
-    font-size: 15px;
+    font-size: 14px;
     text-align: center;
   }
   .footer_nav {
@@ -1742,7 +1750,7 @@ footer {
     gap: 44px;
   }
   .footer_background {
-    height: 783px;
+    height: 830px;
     background-size: 134% 91%;
   }
   .footer_back_move_1 {
@@ -2500,9 +2508,13 @@ footer {
   font-size: 16px;
   font-family: "TsukuARdGothic-Regular", sans-serif;
 }
-.textarea.c-form__input {
-  height: 200px;
+.c-form__input02::placeholder {
+  color: #777;
+  opacity: 1;
 }
+/* .textarea.c-form__input {
+  height: 200px;
+} */
 .c-form__submit {
   text-align: center;
 }
