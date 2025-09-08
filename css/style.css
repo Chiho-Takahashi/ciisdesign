@@ -2159,7 +2159,7 @@ footer {
     margin-left: 65px;
   }
   .camera {
-    margin-bottom: 137px;
+    margin-bottom: 130px;
   }
   .green {
     margin-bottom: 149px;
@@ -2354,7 +2354,7 @@ footer {
     margin-left: 19px;
   }
   .my_name {
-    margin-bottom: 7px;
+    margin-bottom: 10px;
     font-size: 21px;
     letter-spacing: .13em;
   }
@@ -2369,7 +2369,7 @@ footer {
     margin-bottom: 35px;
     font-size: 14px;
     line-height: 1.8;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
   }
   .about_bg {
     height: 900px;
@@ -2380,14 +2380,14 @@ footer {
   }
   .about_list {
     top: 247px;
-    height: 553px;
+    height: 580px;
     padding-left: 17px;
   }
   .dots2 {
-    top: 139px;
+    top: 145px;
   }
   .dots3 {
-    top: 354px;
+    top: 380px;
   }
   #collection {
     max-width: 305px;
@@ -2441,7 +2441,7 @@ footer {
   }
   .logo_consept {
     max-width: 305px;
-    margin: 60px auto 162px;
+    margin: 60px auto 190px;
     font-size: 14px;
   }
   .logo_moc img {
