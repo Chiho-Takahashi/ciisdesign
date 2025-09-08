@@ -65,13 +65,13 @@
         <nav class="header_nav-sp">
           <ul class="header_nav_list">
             <li class="header_nav_item">
-              <a href="about.html">About</a>
+              <a href="./about.html">About</a>
             </li>
             <li class="header_nav_item">
-              <a href="index.html#service">Service</a>
+              <a href="./index.html#service">Service</a>
             </li>
             <li class="header_nav_item">
-              <a href="works.html">Works</a>
+              <a href="./works.html">Works</a>
             </li>
             <li class="header_nav_item">
               <a href="contact.html">Contact</a>
@@ -200,8 +200,46 @@
 
 
   </footer>
+  <script>
+    $(function () {
+        // ハンバーガーメニュー
+        $(".hamburger").click(function () {
+            $(".hamburger").toggleClass("open");
+            $(".header_nav-sp").fadeToggle();
+        });
 
+        const $pageTop = $(".toTop");
 
+        $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 100) {
+            if (!$pageTop.is(":visible")) {
+            $pageTop.fadeIn(200).css("display", "flex");
+            }
+        } else {
+            if ($pageTop.is(":visible")) {
+            $pageTop.fadeOut(200);
+            }
+        }
+
+        let scrollHeight = $(document).height(); // ドキュメントの高さ
+        let scrollPosition = $(window).height() + $(window).scrollTop(); // 現在のスクロール位置
+        let footHeight = $("footer").innerHeight(); // フッターの高さ
+
+        if (scrollHeight - scrollPosition <= footHeight) {
+            // フッターが見えたらボタンを固定ではなくabsoluteに変更
+            $pageTop.css({
+            position: "absolute",
+            bottom: footHeight + 20, // 余白を調整
+            });
+        } else {
+            $pageTop.css({
+            position: "fixed",
+            bottom: "50px",
+            });
+        }
+        });
+    });
+  </script>
   <script type="text/javascript">
       let submitted = false;
   </script>

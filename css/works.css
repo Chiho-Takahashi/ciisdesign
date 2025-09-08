@@ -1246,7 +1246,7 @@ footer {
 @media screen and (max-width: 768px) {
     #header {
     position: fixed;
-    top: 20px;
+    top: 10px;
     left: 0;
     z-index: 9999;
     width: 100%;
@@ -1262,7 +1262,7 @@ footer {
     height: 30px;
     position: fixed;
     right: 20px;
-    top: 60px;
+    top: 40px;
     cursor: pointer;
     z-index: 9999;
     }
@@ -1375,10 +1375,9 @@ footer {
     /* .desc_title02{
         margin-bottom: 0;
     } */
-
-    .works_img_1{
+    /* .works_img_1{
         overflow: hidden;
-    }
+    } */
 
     .sp_moc{
         margin: 20px auto;
@@ -1520,9 +1519,10 @@ footer {
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
     }
-    
-    
 
+    .moc_capture_sp_img {
+        display: none;
+    }
     .capture_sp02{
         position: absolute;
         left: 50%;
@@ -1933,9 +1933,6 @@ footer {
     .moc_area {
         top: 354px;
     }
-    /* .desc_title {
-        margin-bottom: 350px;
-    } */
     .moc_area_4 {
         top: 240px;
     }
@@ -1943,6 +1940,10 @@ footer {
         width: min(calc(85% - 40px), 1000px);
         height: calc(85% - 40px);
     }
+    .img_detail_04{
+        max-width: 270px;
+    }
+
     .footer_logo {
         width: 70px;
         left: 16.6%;

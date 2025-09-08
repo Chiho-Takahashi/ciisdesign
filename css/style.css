@@ -1493,7 +1493,7 @@ footer {
   .footer_background {
     height: 1080px;
     background-size: 135% 94%;
-    margin-top: 0px;
+    /* margin-top: 0px; */
   }
   
   .footer_container {
@@ -1520,7 +1520,8 @@ footer {
   .copy {
     right: 50%;
     transform: translateX(50%);
-    width: 194px;
+    /* width: 194px; */
+    margin: auto;
     font-size: 9px;
   }
   .toTop img {
@@ -1718,7 +1719,7 @@ footer {
     font-size: 13px;
   }
   .section_subtitle {
-    width: 233px;
+    width: 260px;
   }
   .section_title_contact div {
     position: absolute;
@@ -1729,8 +1730,8 @@ footer {
   }
   .contact_container {
     left: 50%;
-    max-width: 220px;
-    margin-top: 144px;
+    max-width: 240px;
+    margin-top: 230px;
   }
   .contact_content {
     font-size: 14px;
@@ -2158,10 +2159,10 @@ footer {
     margin-left: 65px;
   }
   .camera {
-    margin-bottom: 142px;
+    margin-bottom: 137px;
   }
   .green {
-    margin-bottom: 150px;
+    margin-bottom: 149px;
   }
   .list_text01 {
     padding: 40px 0 0 77px;
@@ -2367,7 +2368,8 @@ footer {
   .about_content p {
     margin-bottom: 35px;
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
   }
   .about_bg {
     height: 900px;
@@ -2385,7 +2387,7 @@ footer {
     top: 139px;
   }
   .dots3 {
-    top: 340px;
+    top: 354px;
   }
   #collection {
     max-width: 305px;
@@ -2530,7 +2532,7 @@ footer {
   background-color: transparent;
   color: #353b3f;
   font-size: 18px;
-  font-family: "TsukuARdGothic-Regular", sans-serif;
+  font-family: 'TsukuARdGothic-Regular', 'M PLUS Rounded 1c', 'Hiragino Maru Gothic Pro', 'Yu Gothic Rounded', sans-serif;
   transition: .4s;
 }
 .c-form__submit button:hover {
@@ -2629,11 +2631,11 @@ footer {
     font-size: 16px;
   }
   .c-form__submit button {
-    width: 250px;
-    height: 56px;
+    width: 160px;
+    height: 40px;
     margin-top: 72px;
     border-radius: 28px;
-    font-size: 18px;
+    font-size: 15px;
   }
   .footer_background2 {
     height: 400px;
