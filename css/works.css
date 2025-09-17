@@ -124,6 +124,7 @@
     position: relative;
 }
 .works_img_1{
+	display: block;
     width: 80%;
     border-radius: 9px;
     overflow: hidden;
