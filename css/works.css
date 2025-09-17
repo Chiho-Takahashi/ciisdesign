@@ -134,6 +134,7 @@
     left: 50%;
     transform: translate(-50%,-50%);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+	z-index: 1;
 }
 
 /* imgタグの追加修正 */
@@ -189,6 +190,7 @@
     aspect-ratio: 1/1;
     border-radius: 50%;
     margin-bottom: 27px;
+	z-index: 0;
 }
 .circle_corlor01{
     background-color: #F2EBEC;
