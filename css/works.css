@@ -104,7 +104,6 @@
 }
 /* ホバーすると画像が拡大 */
 .work_wrap{
-    /* overflow: hidden; */
     width: 100%;
 }
 .work_wrap :hover  .works_img_1 img {
@@ -122,7 +121,10 @@
 
 .work_wrap a{
     position: relative;
+    display: block;
 }
+
+/* works_img_1 の修正 */
 .works_img_1{
     width: 80%;
     border-radius: 9px;
@@ -133,6 +135,24 @@
     transform: translate(-50%,-50%);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
 }
+
+/* imgタグの追加修正 */
+.works_img_1 img {
+    display: block; /* 画像の下の余白を消す */
+    width: 100%;
+    height: auto;
+}
+
+/* .works_img_1{
+    width: 80%;
+    border-radius: 9px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+} */
 .works_img_2{
     width: 65%;
     border-radius: 9px;
