@@ -126,7 +126,6 @@
 
 /* works_img_1 の修正 */
 .works_img_1{
-	display: block;
     width: 80%;
     border-radius: 9px;
     overflow: hidden;
