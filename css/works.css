@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 25px;
   padding-right: 7.8%;
   padding-left: 6.2%;
   animation-name: fadeTopAnime;
@@ -62,7 +62,7 @@
     position: relative;
     width: 204px;
     height: 56px;
-    margin: 166px auto 176px;
+    margin: 140px auto 100px;
 }
 .section_title{
     font-size: 40px;
@@ -124,7 +124,29 @@
     display: block;
 }
 
-/* works_img_1 の修正 */
+
+imgタグの追加修正
+.works_img_1 img {
+    display: block; /* 画像の下の余白を消す */
+    width: 100%;
+    height: auto;
+}
+.works_img_2 img {
+    display: block; 
+    width: 100%;
+    height: auto;
+}
+.works_img_3 img {
+    display: block; 
+    width: 100%;
+    height: auto;
+}
+.works_img_4 img {
+    display: block; 
+    width: 100%;
+    height: auto;
+}
+
 .works_img_1{
     width: 80%;
     border-radius: 9px;
@@ -135,24 +157,6 @@
     transform: translate(-50%,-50%);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
 }
-
-/* imgタグの追加修正 */
-.works_img_1 img {
-    display: block; /* 画像の下の余白を消す */
-    width: 100%;
-    height: auto;
-}
-
-/* .works_img_1{
-    width: 80%;
-    border-radius: 9px;
-    overflow: hidden;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
-} */
 .works_img_2{
     width: 65%;
     border-radius: 9px;
@@ -189,6 +193,7 @@
     aspect-ratio: 1/1;
     border-radius: 50%;
     margin-bottom: 27px;
+    z-index: 0;
 }
 .circle_corlor01{
     background-color: #F2EBEC;
@@ -1243,7 +1248,7 @@ footer {
         margin-bottom: 30px;
     }
     .w_desc_title{
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1.2;
         margin: 0 0 7px 10px;
     }
