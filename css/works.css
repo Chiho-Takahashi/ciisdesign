@@ -156,6 +156,7 @@ imgタグの追加修正
     left: 50%;
     transform: translate(-50%,-50%);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+	z-index: 1;
 }
 .works_img_2{
     width: 65%;
@@ -193,7 +194,11 @@ imgタグの追加修正
     aspect-ratio: 1/1;
     border-radius: 50%;
     margin-bottom: 27px;
+<<<<<<< HEAD
     z-index: 0;
+=======
+	z-index: 0;
+>>>>>>> f8bc32f53f128779651ceb42b387ea85566f6667
 }
 .circle_corlor01{
     background-color: #F2EBEC;
