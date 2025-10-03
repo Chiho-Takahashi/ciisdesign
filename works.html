@@ -81,10 +81,12 @@
 
     <section id="works">
         <!-- タイトル -->
-        <div class="title_works">
-            <h2 class="section_title"><span>W</span>orks</h2>
-            <div></div>
-            <p class="section_subtitle">制作実績</p>
+        <div class="works_title">
+              <div class="section_title_w">
+                <img src="./images/works_title.png" />
+              </div>
+              <h2 class="section_subtitle_w">制作実績
+              </h2>
         </div>
 
         <ul class="works_list_container">
@@ -382,7 +384,7 @@
             </div>
             <div class="bg-area">
                 <picture>
-                    <source srcset="./images/footer_5.png" media="(min-width: 768px)">
+                    <source srcset="./images/footer_5.png" media="(min-width: 769px)">
                     <img src="./images/footer_sp_2.png" alt="">
                 </picture>
             </div>
@@ -396,54 +398,7 @@
         </div>
         
     </footer>
-    <script>
-        $(function () {
-            // ハンバーガーメニュー
-            $(".hamburger").click(function () {
-                $(".hamburger").toggleClass("open");
-                $(".header_nav-sp").fadeToggle();
-            });
-
-            const $pageTop = $(".toTop");
-
-            $(window).on("scroll", function () {
-            if ($(this).scrollTop() > 100) {
-                if (!$pageTop.is(":visible")) {
-                $pageTop.fadeIn(200).css("display", "flex");
-                }
-            } else {
-                if ($pageTop.is(":visible")) {
-                $pageTop.fadeOut(200);
-                }
-            }
-
-            let scrollHeight = $(document).height(); // ドキュメントの高さ
-            let scrollPosition = $(window).height() + $(window).scrollTop(); // 現在のスクロール位置
-            let footHeight = $("footer").innerHeight(); // フッターの高さ
-
-            if (scrollHeight - scrollPosition <= footHeight) {
-                // フッターが見えたらボタンを固定ではなくabsoluteに変更
-                $pageTop.css({
-                position: "absolute",
-                bottom: footHeight + 20, // 余白を調整
-                });
-            } else {
-                $pageTop.css({
-                position: "fixed",
-                bottom: "50px",
-                });
-            }
-            });
-
-            // トップへ戻るボタンのクリックイベント
-            $("#topBtn, .toTop").on("click", function () {
-            $("html, body").animate({ scrollTop: 0 }, 400);
-            return false;
-            });
-    
-        });
-    </script>
-  
+    <script src="/js/main.js"></script>
 
 </body>
 </html>

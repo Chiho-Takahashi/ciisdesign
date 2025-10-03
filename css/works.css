@@ -57,38 +57,25 @@
 .hamburger, .header_nav-sp {
     display: none;
 }
-
-.title_works{
+/* タイトル */
+.works_title{
     position: relative;
-    width: 204px;
-    height: 56px;
+    width: 185px;
+    height: 90px;
     margin: 140px auto 100px;
 }
-.section_title{
-    font-size: 40px;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    letter-spacing: 0.1em;
-    text-align: left;
+.section_title_w {
+  width: 168px;
+  position: absolute;
+  top: -37px;
 }
-.section_title span{
-    color: #8AC1B9;
+.section_subtitle_w {
+  position: absolute;
+  font-size: 17px;
+  text-align: right;
+  right: 0;
 }
-.section_subtitle{
-    font-size: 17px;
-    text-align: right;
-    align-items: end;
-}
-.title_works div{
-    position: absolute;
-    top: 100%;
-    left: 55%;
-    width: 70px; 
-    height: 2px; 
-    background-color: #353B3F; 
-    transform-origin: 0% 0%;
-    transform: rotate(-45deg); 
-}
-
+/* worksリスト */
 .works_list_container{
     max-width: 1250px;
     padding: 0 100px;
@@ -125,7 +112,7 @@
 }
 
 
-imgタグの追加修正
+/* imgタグの追加修正 */
 .works_img_1 img {
     display: block; /* 画像の下の余白を消す */
     width: 100%;
@@ -302,17 +289,19 @@ imgタグの追加修正
 	right:-65px;
 }
 
-/* ここからworks詳細ページ */
-.section_title_works{
-    font-size: 40px;
-    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    letter-spacing: 0.1em;
-    text-align: center;
-    margin: 160px 50px 206px 0;
+/* ================ここからworks詳細ページ =============*/
+.works_title{
+    position: relative;
+    width: 168px;
+    height: 90px;
+    margin: 140px auto 100px;
 }
-.section_title_works span{
-    color: #8AC1B9;
+.section_title_w {
+    width: 168px;
+    position: absolute;
+    top: -37px;
 }
+
 .works_detail{
     max-width: 1300px;
     margin: auto;
