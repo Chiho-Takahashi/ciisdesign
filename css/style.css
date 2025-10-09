@@ -565,7 +565,7 @@
   letter-spacing: .1em;
 }
 .service_subtitle p {
-  font-size: 16px;
+  font-size: 14px;
 }
 .service_tool {
   margin-bottom: 15px;
@@ -579,7 +579,7 @@
 .service_content {
   font-size: 15px;
   line-height: 1.7;
-  letter-spacing: .025em;
+  letter-spacing: .026em;
 }
 /* works */
 
@@ -805,8 +805,8 @@
 
 .contact_content {
   font-size: 17px;
-  line-height: 1.7;
-  letter-spacing: .025em;
+  line-height: 1.8;
+  letter-spacing: .026em;
 }
 /* contact ボタン ホバーで色変換・▶️回転 */
 .btn_triangle_c {
@@ -1115,8 +1115,8 @@ footer {
   }
   .consept_wrap p {
     margin-bottom: 55px;
-    font-size: 16px;
-    line-height: 2.8;
+    font-size: 15px;
+    line-height: 2.5;
     letter-spacing: .025em;
   }
   .consept_wrap {
@@ -1189,7 +1189,7 @@ footer {
 
    /* ====== コンタクト 1024px ==== */
   .contact_content {
-    font-size: 16px;
+    font-size: 15px;
   }
   .contact_container {
     margin-top: 151px;
@@ -1209,7 +1209,7 @@ footer {
   }
   .footer_container {
     right: 42%;
-    bottom: 10%;
+    bottom: 7%;
   }
   .footer_back_move_1 {
     right: 133px;
@@ -1234,12 +1234,20 @@ footer {
 }
 /* ============ 850px以下============= */
 @media screen and (max-width: 850px) {
+  .main-visual {
+    margin: 12% auto 0;
+  }
+
   .service_container li {
   height: 250px;
   }
   .works_list{
     gap: 15px;
   }
+  .consept_bg_sp {
+    height: 950px;
+  }
+
 }
 
 /* ============ 768px以下============= */
@@ -2478,6 +2486,12 @@ footer {
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   letter-spacing: .1em;
 }
+.footer_container_c {
+  position: absolute;
+  right: 56%;
+  bottom: 8%;
+  z-index: 103;
+}
 
 /*1024_contact*/
 @media screen and (max-width: 1024px) {
@@ -2488,7 +2502,12 @@ footer {
     right: 43%;
     bottom: 15%;
   }
+  .footer_container_c {
+    right: 42%;
+    bottom: 10%;
+  }
 }
+
 
 /*768_contact*/
 @media screen and (max-width: 768px) {
